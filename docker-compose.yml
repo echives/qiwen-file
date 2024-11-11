@@ -1,0 +1,23 @@
+# yaml 配置实例
+services:
+  db:
+    image: mysql:latest
+    # mysql默认端口3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: file
+  backend:
+    build:
+      context: .
+    dockerfile: dockerfile
+    ports:
+      - "21307:8080"
+    depends_on:
+      - db
+    tty: true
+    environment:
+      DB_HOST: db 
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: 123456
+      DB_NAME: file

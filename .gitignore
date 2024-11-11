@@ -3,3 +3,4 @@
 /*.log
 /target
 /file-web.iml
+*.DS_Store
