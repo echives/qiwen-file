@@ -1,3 +1,18 @@
+
+
+## Docker一键部署后端 & 数据库
+
+### 使用方法
+
+1. 进入项目目录
+2. 构建 & 运行：`docker compose up --build`
+3. 仅构建：`docker compose build`
+4. 仅运行：`docker compose up`
+
+构建时间：MacbookPro M1+16GB RAM **10min** 左右
+
+---
+
 <p align="center">
 	<a href="http://fileos.qiwenshare.com/"><img width="30%" src="https://images.gitee.com/uploads/images/2021/0511/141109_0a709933_947714.png" ></a>
 </p>
