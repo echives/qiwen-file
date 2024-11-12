@@ -9,15 +9,21 @@ services:
   backend:
     build:
       context: .
-    dockerfile: dockerfile
     ports:
       - "21307:8080"
     depends_on:
       - db
     tty: true
+    stdin_open: true
     environment:
       DB_HOST: db 
       DB_PORT: 3306
       DB_USER: root
       DB_PASSWORD: 123456
       DB_NAME: file
+    entrypoint: >
+      sh -c '
+        echo "Starting" && 
+        dockerize -wait tcp://db:3306 -timeout 20s bash start.sh &&
+        bash
+      '
