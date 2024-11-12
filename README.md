@@ -9,7 +9,15 @@
 3. 仅构建：`docker compose build`
 4. 仅运行：`docker compose up`
 
-构建时间：MacbookPro M1+16GB RAM **10min** 左右
+### 构建时间
+
+MacbookPro M1+16GB RAM：**10min** 左右
+
+### 对应前端项目
+
+https://github.com/qiwenshare/qiwen-file-web
+
+❗️后端端口需设置为21306
 
 ---
 
